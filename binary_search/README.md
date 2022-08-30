@@ -1,5 +1,4 @@
 # Binary Search
----
 Binary search is an algorithm; its input is ***a sorted list*** of elements. If an element you're looking for is in that list, binary search returns the ***position where it's located***. Otherwise, binary search returns ***null***.
 
 In general, for any list of n, binary search will take log2(n) steps to run in the worst case, whereas simple search will take n steps.
@@ -7,7 +6,6 @@ In general, for any list of n, binary search will take log2(n) steps to run in t
 *Note: Binary search only works when your list is in sorted order.*
 
 # Running time
----
 Any time I talk about an algorithm, I'll discuss its running time. Generally you want to choose the most efficient algorithm--whether you're trying to optimize for time or space.
 
 Back to **binary search**. How much time do you save by using it? 
