@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "mgesbert.python-path",
+        "kevinrose.vsc-python-indent",
+        "njpwerner.autodocstring",
+        "donjayamanne.python-extension-pack",
+        "donjayamanne.python-environment-manager",
+        "tabnine.tabnine-vscode",
+        "ms-python.python"
+    ]
+}
