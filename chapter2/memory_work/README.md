@@ -2,7 +2,7 @@
 
 This is basically how your computer's memory works. Your computer looks like a giant set of drawers, and each drawer has an address.
 
-[Memory](../images/memory.png)
+![Memory](../_images/memory.png)
 
 **fe0ffeeb** is the address of a slot in memory
 
