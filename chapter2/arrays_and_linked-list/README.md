@@ -8,11 +8,11 @@ Let's store the todos in an array first.
 
 **Using an array means all your tasks are stored contigously (right next to each other) in memory.**
 
-[Array Memory](../images/memory_array.png)
+![Array Memory](../images/memory_array.png)
 
 Now suppose you want to add a fourth task. But the next drawer is taken up by someone else's stuff.
 
-[Overflow Memory](../images/memory_array_overflow.png)
+![Overflow Memory](../images/memory_array_overflow.png)
 
 So, that's when ***Linked List*** comes in.
 
@@ -20,7 +20,7 @@ So, that's when ***Linked List*** comes in.
 
 *With linked list, your items can be anywhere in memory. Each item stores the address of the next item in the list. A bunch of random memory addresses are linked together.*
 
-[Linked List](../images/linked_list.png)
+![Linked List](../images/linked_list.png)
 
 If **linked list** are so much better at inserts, what are **arrays** good for?
 
@@ -28,7 +28,7 @@ If **linked list** are so much better at inserts, what are **arrays** good for?
 
 *Arrays are great if you want to read random elements, because you can look up any element in your array instantly.*
 
-[Array](../images/array.png)
+![Array](../images/array.png)
 
 With a linked list, the elements aren't next to each other, so you can't instantly calculate the position of the fifth element in memory--you have to go the first element to get the address to the second element, then go to the second element to get the address to the third element, and so on until you get the the fifth element.
 
@@ -36,11 +36,11 @@ With a linked list, the elements aren't next to each other, so you can't instant
 
 Use *index* to indicate the position of an element.
 
-[Index](../images/index.png)
+![Index](../images/index.png)
 
 The run times for common operations on arrays and lists:
 
-[Runtimes](../images/runtime.png)
+![Runtimes](../images/runtime.png)
 
 # Inserting into the middle of a list
 
@@ -49,11 +49,11 @@ Suppose you want your todo list to work more like a calendar. Earlier, you were 
 
 With lists, it's as easy as changing the what the previous element points to.
 
-[Insert into a linked list](../images/insert_linked_list.png)
+![Insert into a linked list](../images/insert_linked_list.png)
 
 But for arrays, you have to shift all the rest of the elements down. And if there's no space, you might have to copy everything to a new location!
 
-[Insert into an array](../images/insert_array.png)
+![Insert into an array](../images/insert_array.png)
 
 :arrow_right: ***Lists are better if you want to insert elements in the middle.***
 
@@ -67,7 +67,7 @@ Unlike insertions, deletions will always work. Insertions can fail sometimes whe
 
 The run times for common operations on arrays and linked lists:
 
-[Deletions](../images/deletion.png)
+![Deletions](../images/deletion.png)
 
 ***So, which are used more?***
 
