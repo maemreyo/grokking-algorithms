@@ -1,9 +1,9 @@
-var binarySearch = function (sortedArray, searchItem) {
-    var low = 0;
-    var high = sortedArray.length - 1;
+const binarySearch = (sortedArray, searchItem) => {
+    let low = 0;
+    let high = sortedArray.length - 1;
     while (low <= high) {
-        var mid = Math.floor((low + high) / 2);
-        var guess = sortedArray[mid];
+        let mid = Math.floor((low + high) / 2);
+        let guess = sortedArray[mid];
         if (guess === searchItem)
             return mid;
         if (guess < searchItem)
@@ -13,7 +13,7 @@ var binarySearch = function (sortedArray, searchItem) {
     }
     return -1;
 };
-var sampleList = [1, 2, 3, 4, 5, 6, 7, 8, 12, 15, 19, 55, 88, 99, 99, 99, 99, 99, 99, 99, 99];
+const sampleList = [1, 2, 3, 4, 5, 6, 7, 8, 12, 15, 19, 55, 88, 99, 99, 99, 99, 99, 99, 99, 99];
 console.log(binarySearch(sampleList, 99));
 console.log(binarySearch(sampleList, 0));
 //# sourceMappingURL=index.js.map

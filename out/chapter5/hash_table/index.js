@@ -1,26 +1,26 @@
-var HashTable = /** @class */ (function () {
-    function HashTable() {
+class HashTable {
+    constructor() {
         this.table = new Array(127);
         this.size = 0;
     }
-    HashTable.prototype._hash = function (key) {
-        var hash = 0;
-        for (var i = 0; i < key.length; i++) {
+    _hash(key) {
+        let hash = 0;
+        for (let i = 0; i < key.length; i++) {
             hash += key.charCodeAt(i);
         }
         return hash % this.table.length;
-    };
-    HashTable.prototype.set = function (key, value) {
-        var index = this._hash(key);
+    }
+    set(key, value) {
+        const index = this._hash(key);
         this.table[index] = [key, value];
         this.size++;
-    };
-    HashTable.prototype.get = function (key) {
-        var target = this._hash(key);
+    }
+    get(key) {
+        const target = this._hash(key);
         return this.table[target];
-    };
-    HashTable.prototype.remove = function (key) {
-        var index = this._hash(key);
+    }
+    remove(key) {
+        const index = this._hash(key);
         if (this.table[index] && this.table[index].length) {
             this.table[index] = [];
             this.size--;
@@ -29,10 +29,9 @@ var HashTable = /** @class */ (function () {
         else {
             return false;
         }
-    };
-    return HashTable;
-}());
-var hashTable = new HashTable();
+    }
+}
+const hashTable = new HashTable();
 hashTable.set("William", 24);
 hashTable.set("Ruth", 21);
 hashTable.get("William");
