@@ -4,13 +4,38 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+      
       {
         "type": "node",
         "request": "launch",
-        "name": "Launch Program",
+        "name": "Quick Sort",
         "program": "${workspaceFolder}/chapter4/quicksort/index.ts",
+        "outFiles": ["${workspaceFolder}/out/**/*.js"],
         "preLaunchTask": "tsc: build - tsconfig.json",
-        "outFiles": ["${workspaceFolder}/out/**/*.js"]
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Hash Table",
+        "program": "${workspaceFolder}/chapter5/hash_table/index.ts",
+        "outFiles": ["${workspaceFolder}/out/**/*.js"],
+        "preLaunchTask": "tsc: build - tsconfig.json",
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "BFS",
+        "program": "${workspaceFolder}/chapter6/bfs/index.ts",
+        "outFiles": ["${workspaceFolder}/out/**/*.js"],
+        "preLaunchTask": "tsc: build - tsconfig.json",
+      },
+    ],
+    "compounds": [
+      {
+        "name": "Compound",
+        "configurations": ["Quick Sort", "Hash Table", "BFS"],
+        "preLaunchTask": "tsc: build - tsconfig.json",
+        "stopAll": true,
       }
     ]
   }

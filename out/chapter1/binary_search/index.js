@@ -13,7 +13,7 @@ var binarySearch = function (sortedArray, searchItem) {
     }
     return -1;
 };
-var demoList = [1, 2, 3, 4, 5, 6, 7, 8, 12, 15, 19, 55, 88, 99, 99, 99, 99, 99, 99, 99, 99];
-console.log(binarySearch(demoList, 99));
-console.log(binarySearch(demoList, 0));
+var sampleList = [1, 2, 3, 4, 5, 6, 7, 8, 12, 15, 19, 55, 88, 99, 99, 99, 99, 99, 99, 99, 99];
+console.log(binarySearch(sampleList, 99));
+console.log(binarySearch(sampleList, 0));
 //# sourceMappingURL=index.js.map

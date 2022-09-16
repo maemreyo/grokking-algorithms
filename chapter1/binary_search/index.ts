@@ -14,7 +14,7 @@ const binarySearch = (sortedArray: number[], searchItem: number): number => {
     return -1;
 }
 
-const demoList = [1, 2, 3, 4, 5, 6, 7, 8, 12, 15, 19, 55, 88, 99, 99, 99, 99, 99, 99, 99, 99];
+const sampleList = [1, 2, 3, 4, 5, 6, 7, 8, 12, 15, 19, 55, 88, 99, 99, 99, 99, 99, 99, 99, 99];
 
-console.log(binarySearch(demoList, 99));
-console.log(binarySearch(demoList, 0));
+console.log(binarySearch(sampleList, 99));
+console.log(binarySearch(sampleList, 0));

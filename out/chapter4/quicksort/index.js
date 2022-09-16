@@ -13,12 +13,6 @@ var quicksort = function (list) {
     }
     else {
         var pivot_1 = list.shift();
-        // let less: number[] = [];
-        // for (let i = 0; i < list.length; i++) {
-        //     if (list[i] <= pivot) {
-        //         less.push(list[i]);                
-        //     }
-        // }
         var less = list.filter(function (x) { return x <= pivot_1; });
         var greater = list.filter(function (x) { return x > pivot_1; });
         return __spreadArray(__spreadArray(__spreadArray([], quicksort(less), true), [pivot_1], false), quicksort(greater), true);
