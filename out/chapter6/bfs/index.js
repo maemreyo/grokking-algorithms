@@ -31,5 +31,5 @@ const enqueueItems = (queue, items) => {
         queue.enqueue(guest);
     }
 };
-console.log(BFS(dummy_data_1.default, "you", "Je31"));
+console.log(BFS(dummy_data_1.default, "you", "Jo31"));
 //# sourceMappingURL=index.js.map
