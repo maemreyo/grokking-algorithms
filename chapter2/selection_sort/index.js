@@ -1,7 +1,7 @@
 var findSmallest = function (list) {
     var smallest = list[0];
     var smallestIndex = 0;
-    for (var i = 0; i < list.length; i++) {
+    for (var i = 1; i < list.length; i++) {
         if (list[i] < smallest) {
             smallest = list[i];
             smallestIndex = i;
@@ -15,8 +15,6 @@ var selectionSort = function (list) {
     for (var i = 0; i < length; i++) {
         var smallestIndex = findSmallest(list);
         var smallest = list.splice(smallestIndex, 1)[0];
-        console.log("list", list);
-        console.log("smallest", smallest);
         newList.push(smallest);
     }
     return newList;
