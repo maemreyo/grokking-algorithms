@@ -12,15 +12,19 @@ var quicksort = function (list) {
         return list;
     }
     else {
-        var pivot_1 = list[0];
+        var pivot = list[0];
         var less = [];
-        for (var i = 1; i < list.length; i++) {
-            if (list[i] <= pivot_1) {
-                less.push(list[i]);
+        var greater = [];
+        for (var index = 1; index < list.length; index++) {
+            var item = list[index];
+            if (item >= pivot) {
+                greater.push(item);
+            }
+            else {
+                less.push(item);
             }
         }
-        var greater = list.filter(function (x) { return x > pivot_1; });
-        return __spreadArray(__spreadArray(__spreadArray([], quicksort(less), true), [pivot_1], false), quicksort(greater), true);
+        return __spreadArray(__spreadArray(__spreadArray([], quicksort(less), true), [pivot], false), quicksort(greater), true);
     }
 };
-console.log("Quicksort:", quicksort([10, 5, 2, 3, 2, 1, 3, 1, 9, 6]));
+console.log("Quicksort:", quicksort([4, 10, 5, 2, 3, 2, 1, 3, 4, 1, 9, 6]));

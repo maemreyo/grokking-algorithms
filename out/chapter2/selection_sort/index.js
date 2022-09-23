@@ -1,7 +1,7 @@
 const findSmallest = (list) => {
     let smallest = list[0];
     let smallestIndex = 0;
-    for (let i = 0; i < list.length; i++) {
+    for (let i = 1; i < list.length; i++) {
         if (list[i] < smallest) {
             smallest = list[i];
             smallestIndex = i;

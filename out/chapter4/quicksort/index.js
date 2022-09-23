@@ -4,10 +4,19 @@ const quicksort = (list) => {
     }
     else {
         let pivot = list.shift();
-        let less = list.filter(x => x <= pivot);
-        let greater = list.filter(x => x > pivot);
+        let less = [];
+        let greater = [];
+        for (let index = 1; index < list.length; index++) {
+            const item = list[index];
+            if (item > pivot) {
+                greater.push(item);
+            }
+            else {
+                less.push(item);
+            }
+        }
         return [...quicksort(less), pivot, ...quicksort(greater)];
     }
 };
-console.log("Quicksort:", quicksort([4, 10, 5, 2, 3, 2, 1, 3, 1, 9, 6]));
+console.log("Quicksort:", quicksort([4, 10, 5, 2, 3, 2, 1, 3, 4, 1, 9, 6]));
 //# sourceMappingURL=index.js.map
