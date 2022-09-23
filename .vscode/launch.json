@@ -4,12 +4,19 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-      
       {
         "type": "node",
         "request": "launch",
         "name": "Quick Sort",
         "program": "${workspaceFolder}/chapter4/quicksort/index.ts",
+        "outFiles": ["${workspaceFolder}/out/**/*.js"],
+        "preLaunchTask": "tsc: build - tsconfig.json",
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Merge Sort",
+        "program": "${workspaceFolder}/chapter4/mergesort/index.ts",
         "outFiles": ["${workspaceFolder}/out/**/*.js"],
         "preLaunchTask": "tsc: build - tsconfig.json",
       },
@@ -33,7 +40,7 @@
     "compounds": [
       {
         "name": "Compound",
-        "configurations": ["Quick Sort", "Hash Table", "BFS"],
+        "configurations": ["Quick Sort", "Hash Table", "BFS", "Merge Sort"],
         "preLaunchTask": "tsc: build - tsconfig.json",
         "stopAll": true,
       }

@@ -3,12 +3,12 @@ const quicksort = (list) => {
         return list;
     }
     else {
-        let pivot = list.shift();
+        let pivot = list[0];
         let less = [];
         let greater = [];
         for (let index = 1; index < list.length; index++) {
             const item = list[index];
-            if (item > pivot) {
+            if (item >= pivot) {
                 greater.push(item);
             }
             else {
